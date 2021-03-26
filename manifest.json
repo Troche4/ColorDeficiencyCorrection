@@ -1,0 +1,15 @@
+{
+  "name": "Color Deficiency Correction",
+  "version": "1.0",
+  "manifest_version": 2,
+  "description": "Applies filters to your browser to correct the effects of color deficiency and blindness..",
+  "homepage_url": "https://github.com/Troche4",
+  "browser_action": {
+    "default_title": "Color Deficiency Correction",
+    "default_popup": "popup.html"
+  },
+  "permissions": [
+    "activeTab",
+    "storage"
+  ]
+}
