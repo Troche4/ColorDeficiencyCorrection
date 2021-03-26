@@ -15,3 +15,6 @@ Supported color deficiencies:
  - Blue Blindness
  - Blue Cone Monochromacy
 
+Deployment instructions:
+
+Users who want to use this software can clone it to their machine and unpack it as a Chrome extension.
