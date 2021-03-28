@@ -3,29 +3,11 @@ const makeCssStyles = type =>
 const makeSVGFilter = (type, filterValues) =>
   `<svg id="colorblind-filters" style="display: none"> <defs> <filter id="${type}"> <feColorMatrix type="matrix" values="${filterValues}" in="SourceGraphic" /> </filter> </defs> </svg>`;
 const filters = {
-  achromatomalySVG: makeSVGFilter(
-    "achromatomaly",
-    "0.618,0.320,0.062,0,0 0.163,0.775,0.062,0,0 0.163,0.320,0.516,0,0 0,0,0,1,0"
-  ),
-  achromatomalyStyles: makeCssStyles("achromatomaly"),
-
-  achromatopsiaSVG: makeSVGFilter(
-    "achromatopsia",
-    "0.299,0.587,0.114,0,0 0.299,0.587,0.114,0,0 0.299,0.587,0.114,0,0 0,0,0,1,0"
-  ),
-  achromatopsiaStyles: makeCssStyles("achromatopsia"),
-
   deuteranomalySVG: makeSVGFilter(
     "deuteranomaly",
     "0.8,0.2,0,0,0 0.258,0.742,0,0,0 0,0.142,0.858,0,0 0,0,0,1,0"
   ),
   deuteranomalyStyles: makeCssStyles("deuteranomaly"),
-
-  deuteranopiaSVG: makeSVGFilter(
-    "deuteranopia",
-    "0.625,0.375,0,0,0 0.7,0.3,0,0,0 0,0.3,0.7,0,0 0,0,0,1,0"
-  ),
-  deuteranopiaStyles: makeCssStyles("deuteranopia"),
 
   protanomalySVG: makeSVGFilter(
     "protanomaly",
@@ -33,28 +15,16 @@ const filters = {
   ),
   protanomalyStyles: makeCssStyles("protanomaly"),
 
-  protanopiaSVG: makeSVGFilter(
-    "protanopia",
-    "0.567,0.433,0,0,0 0.558,0.442,0,0,0 0 0.242,0.758,0,0 0,0,0,1,0"
-  ),
-  protanopiaStyles: makeCssStyles("protanopia"),
-
   tritanomalySVG: makeSVGFilter(
     "tritanomaly",
     "0.967,0.033,0,0,0 0,0.733,0.267,0,0 0,0.183,0.817,0,0 0,0,0,1,0"
   ),
-  tritanomalyStyles: makeCssStyles("tritanomaly"),
-
-  tritanopiaSVG: makeSVGFilter(
-    "tritanopia",
-    "0.95,0.05,0,0,0 0,0.433,0.567,0,0 0,0.475,0.525,0,0 0,0,0,1,0"
-  ),
-  tritanopiaStyles: makeCssStyles("tritanopia")
+  tritanomalyStyles: makeCssStyles("tritanomaly")
 };
 
 function applyFilter(filter) {
   //function to apply filters
-  if (filter === "normal")
+  if (filter === "trichromacy")
     return removeFilter({ target: { id: window.selectedFilter } });
 
   //clear any active filters
