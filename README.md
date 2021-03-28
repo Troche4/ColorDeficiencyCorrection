@@ -8,12 +8,8 @@ Project Goal: To create a Chrome extension that applies filters to correct the s
 
 Supported color deficiencies:
  - Green Deficiency 
- - Green Blindness
  - Red Deficiency
- - Red Blindness
- - Blue Deficiency
- - Blue Blindness
- - Blue Cone Monochromacy
+ - Blue/Yellow Deficiency
 
 Deployment instructions:
 
